@@ -26,9 +26,6 @@ header p {
 }
 
 nav {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
       margin-bottom: 3rem;
     }
     .nav-grid {
