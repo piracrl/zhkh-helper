@@ -22,6 +22,7 @@ header p {
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      text-align: left;
 }
     main {
       max-width: 800px;
@@ -32,8 +33,7 @@ header p {
       margin-bottom: 3rem;
     }
     .illustration {
-      background-color: #e0e7ff;
-      height: 200px;
+      height: 350px;
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -41,6 +41,7 @@ header p {
       color: #4c4c4c;
       font-size: 0.9rem;
       border-radius: 8px;
+      margin: 0 auto;
     }
     h2 {
       font-size: 1.8rem;
