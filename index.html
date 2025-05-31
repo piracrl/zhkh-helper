@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Помощник по дому</title>
   <link rel="stylesheet" type="text/css" href="static/style.css">
+  <script>
+    const QUOTATION_MARKS = '"\'«»‘’‚‛“”„‟‹›' // Перечень возможных кавычек
+    const PUNCTUATION_MARKS = '.!?:;,' // Перечень возможных знаков препинания, стоящих после последней кавычки
+
+    const surroundedByQuotationMarks = new RegExp(`^([${QUOTATION_MARKS}]{1})(.*)([${QUOTATION_MARKS}]{1}[${PUNCTUATION_MARKS}]?)$`) // Магическое регулярное выражение, чтобы найти и заменить ссылки, начинающиеся (^) с кавычки и заканчивающиеся ($) кавычкой с необязательным знаком препинания
+
+    Array.from(document.querySelectorAll('a')) // Находим все ссылки
+    .filter(a => surroundedByQuotationMarks.test(a.textContent)) // Отбираем нужные нам
+    .forEach(a => a.innerHTML = a.innerHTML.replace(surroundedByQuotationMarks, '$1<u>$2</u>$3')) // Заворачиваем содержимое в <u>
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Помощник по дому <br>для жильцов комплекса «Парнас»</h1>
-    <p>Неважно, заехали ли вы вчера или живете в нашем жилом комплексе уже несколько лет — этот сайт станет для вас полезным помощником по дому.</p>
-    <p>Не знаете, как оплатить квитанции или куда обратиться для заказа услуг? Теряетесь, когда отключают свет или происходят проблемы с сантехникой? Мы собрали все инструкции для жильцов в одном месте.</p>
-  </header>
-  
   <main>
+    <h1>Помощник по дому <br>для жильцов комплекса «Парнас»</h1>
     <nav>
       <ul class="nav-grid">
         <li><a href="#broke">Что-то сломалось</a></li>
@@ -24,7 +29,6 @@
         <li><a href="#consultation">Консультация в УК</a></li>
       </ul>
     </nav>
-
     <section id="broke">
       <img class="illustration" src="static/img/мастеры.png" alt="Мастер чинит кран">
       <h2>Если в квартире что-то сломалось</h2>
