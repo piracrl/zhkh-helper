@@ -26,6 +26,7 @@ nav {
       padding: 0;
       margin: 0;
       list-style: none;
+      padding-inline-start: 0px !important;
     }
     .nav-grid li {
       margin: 0;
@@ -52,17 +53,6 @@ nav {
     }
     section {
       margin-bottom: 4rem;
-    }
-    .illustration {
-      height: 350px;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #4c4c4c;
-      font-size: 0.9rem;
-      border-radius: 8px;
-      margin: 0 auto;
     }
     h2 {
       font-size: 1.8rem;
@@ -99,6 +89,27 @@ nav {
     .working-hours {
       margin-top: 0.8rem;
     }
+.illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration img {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .illustration img {
+    max-width: 75%;
+    max-height: 300px;
+  }
+}
+
 
     @media (max-width: 600px) {
       header h1 {
@@ -109,10 +120,6 @@ nav {
       }
       h2 {
         font-size: 1.5rem;
-      }
-      .illustration {
-        height: 140px;
-        font-size: 0.8rem;
       }
     }
     @media (max-width: 768px) {
