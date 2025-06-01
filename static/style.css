@@ -146,3 +146,7 @@ a:hover,
 a:hover u {
   text-decoration-color: currentColor;
 }
+
+p, li {
+  text-wrap: pretty;
+}
