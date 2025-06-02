@@ -79,6 +79,10 @@ nav {
       margin-top: -0.5rem;
       padding-inline-start: 24px!important;
     }
+    li {
+      line-height: 1.4em;
+      padding-bottom: 0.5rem;
+    }
     a {
       color: #277BF8;
       white-space: nowrap;
@@ -131,11 +135,9 @@ nav {
 a, 
 a u {
   text-decoration: underline;
-  text-decoration-thickness: 1px; /* Задаём толщину подчёркивания */
-  text-underline-offset: .175em; /* Задаём сдвиг подчёркивания */
-  text-decoration-color: color-mix(in srgb, currentColor, transparent 80%);
-  text-decoration-skip: none; /* Запрещаем подчёркиванию пропускать выносные элементы букв */
-  text-decoration-skip-ink: none;
+  text-decoration-thickness: 1px; 
+  text-underline-offset: .175em; 
+  text-decoration-color: rgb(39 123 248 / 20%);
 }
 
 a:has(u) {
