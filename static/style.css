@@ -88,7 +88,9 @@ nav {
     }
     a {
       color: #277BF8;
-      white-space: nowrap;
+    }
+    .phone {
+      text-wrap: nowrap;
     }
     .appointment {
       margin-bottom: 2rem;
@@ -154,4 +156,23 @@ a:hover u {
 
 p, li {
   text-wrap: pretty;
+}
+
+.working-hours-table {
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.working-hours-table th {
+  text-align: left;
+  padding-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.working-hours-table td {
+  padding: 0.1rem 2rem 0.1rem 0;
+  vertical-align: top;
+  white-space: nowrap;
 }
