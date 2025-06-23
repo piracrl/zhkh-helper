@@ -194,11 +194,12 @@ p, li {
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       background-color: #fff;
+      margin-top: 2rem;
     }
 
     .download-link {
       display: inline-block;
-      margin-top: 2rem;
+      margin: 2rem auto;
       padding: 0.75rem 1.25rem;
       background-color: #277BF8;
       color: white;
